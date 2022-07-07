@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Sports</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button *ngFor="let item of sports" [routerLink]="[item.strSport]">
+      <ion-avatar class="ion-margin-end">
+        <img [src]="item.strSportThumb" />
+      </ion-avatar>
+      <ion-label>{{item.strSport}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

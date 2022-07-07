@@ -1,0 +1,42 @@
+<ion-header *ngIf="Team">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="sports/:strSport/:strLeague"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ Team.strTeam }} Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="Team">
+  <br />
+  <br />
+  <div class="ion-justify-content-center">
+    <img [src]="Team.strTeamBadge" alt="Team Badge" />
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> {{ Team.strAlternate }} </ion-card-title><br />
+      <ion-card-subtitle>{{ Team.strLeague }}</ion-card-subtitle><br />
+      <ion-text>{{ Team.strDescriptionEN }}</ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label class="ion-margin-start"
+          >Formed : {{ Team.intFormedYear }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="flag"></ion-icon>
+        <ion-label class="ion-margin-start"
+          >Country : {{ Team.strCountry }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="locate"></ion-icon>
+        <ion-label class="ion-margin-start"
+          >Stadium : {{ Team.strStadium }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

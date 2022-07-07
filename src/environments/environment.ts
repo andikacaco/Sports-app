@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php',
+  APISports: 'https://www.thesportsdb.com/api/v1/json/2/all_sports.php',
+  APILeagues: 'https://www.thesportsdb.com/api/v1/json/2/all_leagues.php',
+  APICountry: 'https://www.thesportsdb.com/api/v1/json/2/all_countries.php',
 };
 
 /*

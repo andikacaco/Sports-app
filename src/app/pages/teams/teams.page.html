@@ -1,0 +1,24 @@
+<ion-header *ngIf="getTeams">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="sports/{{ getTeams.strSport }}/{{ getTeams.strLeague }}"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Teams</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item
+      button
+      *ngFor="let item of getTeams"
+      [routerLink]="[item.strTeam]">
+      <ion-avatar class="ion-margin-end">
+        <img [src]="item.strTeamBadge" />
+      </ion-avatar>
+      <ion-label>{{item.strTeam}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

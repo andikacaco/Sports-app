@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons *ngIf="strSport">
+      <ion-back-button defaultHref="/sports"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ strSport }} Leagues</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item
+      button
+      *ngFor="let item of getLeagues"
+      [routerLink]="[item.strLeague]">
+      <ion-label>{{item.strLeague}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
